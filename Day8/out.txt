@@ -1,0 +1,24 @@
+n = 10
+y = abcdefg 8
+y = bcdef 85
+y = bcdefg 856
+temp = 856
+y = bcdefg 6
+y = abcdefg 68
+temp = 68
+temp = 0
+y = abcdef 9
+temp = 9
+y = abcdefg 8
+temp = 8
+y = abcdefg 8
+y = abcdefg 88
+temp = 88
+y = bcdef 5
+y = abcdefg 58
+temp = 58
+temp = 0
+y = abcdefg 8
+temp = 8
+temp = 0
+1095
