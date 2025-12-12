@@ -8,9 +8,11 @@ def closeIO():
     sys.stdin.close()
     sys.stdout.close()
 
-def read_lines_from_file():
+def read_lines_from_file(sep = None):
+    if(sep == None):
+        sep = '\n'
     with open('in.txt') as f:
-        lines = f.read().split('\n')
+        lines = f.read().split(sep)
     return lines
 
 
