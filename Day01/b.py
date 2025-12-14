@@ -19,22 +19,28 @@ def solve():
 	pos = 50
 	cntZero = 0
 	for line in lines:
-		is_left_touched_zero = False
+		val = int(line[1:])
 		if(line[0] == 'L'):
-			pos -= int(line[1:])
-			is_left_touched_zero = (pos + int(line[1:]) > 0 and pos <= 0)
+			while(val > 0):
+				if(pos == 0):
+					pos = 100
+				val -= 1
+				pos -= 1
+				if(pos == 0):
+					pos = 100
+					cntZero += 1
 
 		else:
-			pos += int(line[1:])
+			while(val > 0):
+				val -= 1
+				pos += 1
+				if(pos == 100):
+					pos = 0
+					cntZero += 1
 
+		pos %= 100
 
-		cntZero = cntZero + int(pos / 100) + is_left_touched_zero
-		
-		# print(line, pos, is_left_touched_zero, cntZero)
-
-		pos = pos % 100
-		
-		# print(pos)
+		# print(line, pos, cntZero)
 
 	print(cntZero)
 
